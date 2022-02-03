@@ -1,0 +1,412 @@
+package org.pojo;
+
+import java.util.List;
+
+import org.base.Base;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.*;
+
+public class TreatmentPage extends Base {
+
+	public WebElement getBtnAddParameters() {
+		return btnAddParameters;
+	}
+
+	public TreatmentPage() {
+
+		PageFactory.initElements(driver, this);
+	}
+	@FindBy(xpath = "(//*[contains(@class,'Mui-checked')]//following::td[2])")
+	private WebElement txtTreatmentName;
+	
+	public WebElement getTxtTreatmentName() {
+	return txtTreatmentName;
+	}
+	@FindBy(xpath="(//span[text()='Add Parameter(s)'])")
+	private WebElement btnAddParameters;
+	
+     @FindBy(xpath="//span[text()='Remove Parameter(s)']")
+     private WebElement btnRemoveParameters;
+     
+	public void setBtnRemoveParameters(WebElement btnRemoveParameters) {
+		this.btnRemoveParameters = btnRemoveParameters;
+	}
+	@FindBy(xpath="//span[text()='Parameter Code']")
+	private WebElement btnLstParameterCodes;
+	
+	
+	public WebElement getBtnLstParameterCodes() {
+		return btnLstParameterCodes;
+	}
+	
+	public WebElement getBtnLstParameterDescription() {
+		return btnLstParameterDescription;
+	}
+	@FindBy(xpath="//span[text()='Parameter Description']")
+	private WebElement btnLstParameterDescription;
+	
+	@FindBy(xpath = "//*[contains(text(),'Treatment:')]")
+	private WebElement descTreatmentHeaderMapping;
+
+	@FindBy(xpath = "//*[@role=\"columnheader\"]")
+	private List<WebElement> headerMappingPage;
+
+	public WebElement getBtnRemoveParameters() {
+		return btnRemoveParameters;
+	}
+	@FindBy(xpath = "//*[@type=\"checkbox\"]")
+	private List<WebElement> checkBoxLstTreatment;
+
+	public WebElement getDescTreatmentHeaderMapping() {
+		return descTreatmentHeaderMapping;
+	}
+
+	public List<WebElement> getHeaderMappingPage() {
+		return headerMappingPage;
+	}
+
+	public List<WebElement> getCheckBoxLstTreatment() {
+		return checkBoxLstTreatment;
+	}
+
+	@FindBy(xpath = "//*[@type=\"button\"]//*[text()='Products']//parent::button")
+	private WebElement btnProducts;
+
+	@FindBy(xpath = "//*[@type=\"button\"]//*[text()='Wound Parameters']//parent::button")
+	private WebElement btnWoundParameters;
+
+	@FindBy(xpath = "//*[text()='Treatment Code']")
+	private List<WebElement> headerLstTreatmentCode;
+
+	@FindBy(xpath = "//*[text()='Treatment Description']")
+	private List<WebElement> headerLstTreatmentDescription;
+
+	@FindBy(xpath = "//*[text()='Treatment Rank']")
+	private List<WebElement> headerLstTreatmentRank;
+
+	@FindBy(xpath = "(//*[text()='Products'])[2]//parent::button")
+	private List<WebElement> btnLstProducts;
+
+	@FindBy(xpath = "(//*[text()='Wound Parameters'])[2]//parent::button")
+	private List<WebElement> btnLstWoundParameters;
+
+	@FindBy(xpath = "(//*[text()='Add Treatment'])")
+	private List<WebElement> btnLstAddTreatment;
+
+	@FindBy(xpath = "//*[text()='Edit Treatment']//parent::button")
+	private List<WebElement> btnLstEditTreatmment;
+
+	@FindBy(xpath = "//*[text()='Delete Treatment']//parent::button")
+	private List<WebElement> btnLstDeleteTreatmment;
+
+	@FindBy(xpath = "//*[text()='Treatment Code']")
+	private WebElement headerTreatmentCode;
+
+//	@FindAll({
+//			@FindBy(xpath = "//*[@class=\"MuiSvgIcon-root MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc\"]") })
+
+	@FindBy(xpath = "//*[text()='Treatment Description']")
+	private WebElement headerTreatmentDescription;
+
+	@FindBy(xpath = "//*[text()='Treatment Rank']")
+	private WebElement headerTreatmentRank;
+
+	@FindBy(xpath = "(//*[text()='Add Treatment'])")
+	private WebElement btnAddTreatment;
+
+	@FindBy(xpath = "//*[contains(text(),'New Treatment')]")
+	private WebElement DescAddTreatmentPage;
+
+	@FindBy(xpath = "//*[contains(text(),'New Treatment')]")
+	private List<WebElement> DescLstAddTreatmentPage;
+
+	@FindBy(xpath = "//*[contains(text(),'Already Exists')]")
+	private List<WebElement> errLstMsgAlreadyExists;
+
+	@FindBy(xpath = "//*[@name=\"treatmentcode\"]")
+	private WebElement txtTreatmentCode;
+
+	@FindBy(xpath = "//*[@name=\"treatmentDesc\"]")
+	private WebElement txtTreatmentDesc;
+
+	@FindBy(xpath = "//*[@name=\"treatmentRank\"]")
+	private WebElement txtTreatmentRank;
+
+	@FindBy(xpath = "//*[text()='Save']")
+	private WebElement btnSave;
+	@FindBy(xpath = "//*[text()='Edit Treatment']//parent::button")
+	private WebElement btnEditTreatmment;
+
+	@FindBy(xpath = "//*[text()='Delete Treatment']//parent::button")
+	private WebElement btnDeleteTreatmment;
+
+	@FindBy(xpath = "//*[text()='Save']")
+	private List<WebElement> btnLstSave;
+
+	@FindBy(xpath = "//*[text()='Rows per page:']")
+	private List<WebElement> descRowsPerPage;
+
+//	@FindAll({
+//			@FindBy(xpath = "//*[@class=\"MuiSelect-root MuiSelect-select MuiTablePagination-select MuiSelect-selectMenu MuiInputBase-input\"]"),
+//			@FindBy(xpath = "//*[@class=\"MuiSvgIcon-root MuiSelect-icon MuiTablePagination-selectIcon\"]"),
+	@FindBy(xpath = "//*[contains(text(),'Rows per page')]//following::div[@aria-haspopup=\"listbox\"]")
+//			})
+	private WebElement selRowLst;
+
+	@FindBy(xpath = "//*[@class=\"MuiTypography-root MuiTablePagination-caption MuiTypography-body2 MuiTypography-colorInherit\"][2]")
+	private List<WebElement> descPageSize;
+
+	@FindBy(xpath = "//*[@aria-invalid=\"false\"]")
+	private WebElement txtSearchTreatment;
+
+	@FindBy(xpath = "//*[@aria-label=\"sticky table\"]")
+	private List<WebElement> table;
+
+	@FindBy(xpath = "//*[@class=\"MuiTableRow-root\"]")
+	private List<WebElement> table2;
+
+	@FindBy(xpath = "//*[@class=\"MuiList-root MuiMenu-list MuiList-padding\"]")
+	private List<WebElement> selRowList;
+
+	@FindBy(xpath = "//*[@data-value=\"25\"]")
+	private WebElement value25;
+
+	@FindBy(xpath = "(//*[contains(text(),'New')]//following::button)[1]")
+	private WebElement btnClose;
+
+	@FindBy(xpath = "//*[@class=\"MuiTableRow-root MuiTableRow-head\"]")
+	private List<WebElement> treatmentTableHeader;
+
+	public List<WebElement> getTreatmentTableHeader() {
+		return treatmentTableHeader;
+	}
+
+	public WebElement getBtnClose() {
+		return btnClose;
+	}
+
+	public WebElement getDescAddTreatmentPage() {
+		return DescAddTreatmentPage;
+	}
+
+	public List<WebElement> getErrLstMsgAlreadyExists() {
+		return errLstMsgAlreadyExists;
+	}
+
+	public List<WebElement> getBtnLstSave() {
+		return btnLstSave;
+	}
+
+	public WebElement getTxtTreatmentCode() {
+		return txtTreatmentCode;
+	}
+
+	public WebElement getTxtTreatmentDesc() {
+		return txtTreatmentDesc;
+	}
+
+	public WebElement getTxtTreatmentRank() {
+		return txtTreatmentRank;
+	}
+
+	public WebElement getBtnSave() {
+		return btnSave;
+	}
+
+	public WebElement getValue25() {
+		return value25;
+	}
+
+	public List<WebElement> getSelRowList() {
+		return selRowList;
+	}
+
+	public List<WebElement> getTable2() {
+		return table2;
+	}
+
+	public List<WebElement> getDescLstAddTreatmentPage() {
+		return DescLstAddTreatmentPage;
+	}
+
+	public WebElement getHeaderTreatmentCode() {
+		return headerTreatmentCode;
+	}
+
+	public WebElement getHeaderTreatmentDescription() {
+		return headerTreatmentDescription;
+	}
+
+	public WebElement getHeaderTreatmentRank() {
+		return headerTreatmentRank;
+	}
+
+	public WebElement getBtnProducts() {
+		return btnProducts;
+	}
+
+	public WebElement getBtnWoundParameters() {
+		return btnWoundParameters;
+	}
+
+	public WebElement getBtnAddTreatment() {
+		return btnAddTreatment;
+	}
+
+	public WebElement getBtnEditTreatmment() {
+		return btnEditTreatmment;
+	}
+
+	public WebElement getBtnDeleteTreatmment() {
+		return btnDeleteTreatmment;
+	}
+
+	public List<WebElement> getDescRowsPerPage() {
+		return descRowsPerPage;
+	}
+
+	public WebElement getSelRowLst() {
+		return selRowLst;
+	}
+
+	public List<WebElement> getDescPageSize() {
+		return descPageSize;
+	}
+
+	public WebElement getTxtSearchTreatment() {
+		return txtSearchTreatment;
+	}
+
+	public void setHeaderLstTreatmentCode(List<WebElement> headerLstTreatmentCode) {
+		this.headerLstTreatmentCode = headerLstTreatmentCode;
+	}
+
+	public void setHeaderLstTreatmentDescription(List<WebElement> headerLstTreatmentDescription) {
+		this.headerLstTreatmentDescription = headerLstTreatmentDescription;
+	}
+
+	public void setHeaderLstTreatmentRank(List<WebElement> headerLstTreatmentRank) {
+		this.headerLstTreatmentRank = headerLstTreatmentRank;
+	}
+
+	public void setBtnLstProducts(List<WebElement> btnLstProducts) {
+		this.btnLstProducts = btnLstProducts;
+	}
+
+	public void setBtnLstWoundParameters(List<WebElement> btnLstWoundParameters) {
+		this.btnLstWoundParameters = btnLstWoundParameters;
+	}
+
+	public void setBtnLstAddTreatment(List<WebElement> btnLstAddTreatment) {
+		this.btnLstAddTreatment = btnLstAddTreatment;
+	}
+
+	public void setBtnLstEditTreatmment(List<WebElement> btnLstEditTreatmment) {
+		this.btnLstEditTreatmment = btnLstEditTreatmment;
+	}
+
+	public void setBtnLstDeleteTreatmment(List<WebElement> btnLstDeleteTreatmment) {
+		this.btnLstDeleteTreatmment = btnLstDeleteTreatmment;
+	}
+
+	public void setHeaderTreatmentCode(WebElement headerTreatmentCode) {
+		this.headerTreatmentCode = headerTreatmentCode;
+	}
+
+	public void setHeaderTreatmentDescription(WebElement headerTreatmentDescription) {
+		this.headerTreatmentDescription = headerTreatmentDescription;
+	}
+
+	public void setHeaderTreatmentRank(WebElement headerTreatmentRank) {
+		this.headerTreatmentRank = headerTreatmentRank;
+	}
+
+	public void setBtnProducts(WebElement btnProducts) {
+		this.btnProducts = btnProducts;
+	}
+
+	public void setBtnWoundParameters(WebElement btnWoundParameters) {
+		this.btnWoundParameters = btnWoundParameters;
+	}
+
+	public void setBtnAddTreatment(WebElement btnAddTreatment) {
+		this.btnAddTreatment = btnAddTreatment;
+	}
+
+	public void setBtnEditTreatmment(WebElement btnEditTreatmment) {
+		this.btnEditTreatmment = btnEditTreatmment;
+	}
+
+	public void setBtnDeleteTreatmment(WebElement btnDeleteTreatmment) {
+		this.btnDeleteTreatmment = btnDeleteTreatmment;
+	}
+
+	public void setDescRowsPerPage(List<WebElement> descRowsPerPage) {
+		this.descRowsPerPage = descRowsPerPage;
+	}
+
+	public void setSelRowLst(WebElement selRowLst) {
+		this.selRowLst = selRowLst;
+	}
+
+	public void setDescPageSize(List<WebElement> descPageSize) {
+		this.descPageSize = descPageSize;
+	}
+
+	public void setTxtSearchTreatment(WebElement txtSearchTreatment) {
+		this.txtSearchTreatment = txtSearchTreatment;
+	}
+
+	public void setTable(List<WebElement> table) {
+		this.table = table;
+	}
+
+	public void setTable2(List<WebElement> table2) {
+		this.table2 = table2;
+	}
+
+	public void setSelRowList(List<WebElement> selRowList) {
+		this.selRowList = selRowList;
+	}
+
+	public void setValue25(WebElement value25) {
+		this.value25 = value25;
+	}
+
+	public List<WebElement> getTable() {
+		return table;
+	}
+
+	public List<WebElement> getHeaderLstTreatmentCode() {
+		return headerLstTreatmentCode;
+	}
+
+	public List<WebElement> getHeaderLstTreatmentDescription() {
+		return headerLstTreatmentDescription;
+	}
+
+	public List<WebElement> getHeaderLstTreatmentRank() {
+		return headerLstTreatmentRank;
+	}
+
+	public List<WebElement> getBtnLstProducts() {
+		return btnLstProducts;
+	}
+
+	public List<WebElement> getBtnLstWoundParameters() {
+		return btnLstWoundParameters;
+	}
+
+	public List<WebElement> getBtnLstAddTreatment() {
+		return btnLstAddTreatment;
+	}
+
+	public List<WebElement> getBtnLstEditTreatmment() {
+		return btnLstEditTreatmment;
+	}
+
+	public List<WebElement> getBtnLstDeleteTreatmment() {
+		return btnLstDeleteTreatmment;
+	}
+
+}

@@ -1,0 +1,20 @@
+#Author: your.email@your.domain.com
+
+Feature: Validate the URL
+
+ 
+  Scenario: Validate the google.com
+    Given User want to navigate to google url
+    When User Enter the text in search
+    Then Validate the search results
+    
+
+ 
+  Scenario Outline: Title of your scenario outline
+    Given User want to navigate to  <url>
+    When User Enter the text in search
+    Then Validate the search results
+
+    Examples: 
+      |url|
+      |http://www.google.com|

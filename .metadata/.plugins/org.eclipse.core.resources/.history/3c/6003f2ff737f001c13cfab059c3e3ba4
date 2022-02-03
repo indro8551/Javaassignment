@@ -1,0 +1,29 @@
+
+Feature: DWCX-7584_WND - Assign wound attribute parameters to treatment options
+
+  Scenario: DWCX_7584_TC_769 To Validate the Treatment option screen
+    Given User hit Admin portal url
+    When User click on "Treatment" in left side hamburger menu
+    Then User should be redirected to treatment page
+    Then User should validate the Add Edit and Delete button in treatment page
+
+  Scenario: DWCX_7584_TC_770 To Validate the Manage Parameters button in the Treatment option screen
+    Given User hit Admin portal url
+    When User click on "Treatment" in left side hamburger menu
+    Then User should validate the Add Edit and Delete button in treatment page
+    And User select any treatment option
+    Then User should validate the Edit, Delete, Product and WoundParameters buttons are enabled in treatment page
+    And User click on Wound Paramters button in treatment page
+    Then User should validate the parameters and treatment mapping is shown
+@treat
+  Scenario: DWCX_7584_TC_771 To Validate the treatment and parameters mapping screen
+    Given User hit Admin portal url
+    When User click on "Treatment" in left side hamburger menu
+    Then User should validate the Add Edit and Delete button in treatment page
+    And User select any treatment option
+    Then User should validate the Edit, Delete, Product and WoundParameters buttons are enabled in treatment page
+    And User click on Wound Paramters button in treatment page
+    Then User should validate the parameters and treatment mapping is shown
+    Then User should validate selected treatment option is displayed in mapping page
+    Then User should validate the parameters and treatment mapping is shown
+    Then User should validate the button in the treatment mapping screen

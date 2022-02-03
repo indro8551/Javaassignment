@@ -1,0 +1,19 @@
+package com.ha.groups;
+
+import com.ha.base.Person;
+
+public class Student extends Person{
+	
+	private int studentId;
+	private double studentPercentage;
+	private String courseCode;
+	public void setName(String name) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+		
+	}
+	
+
+

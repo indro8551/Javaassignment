@@ -1,0 +1,17 @@
+package com.ha.runner;
+
+import com.ha.groups.Student;
+
+public class Runner {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Student stu1=new Student();
+		stu1.setName("John wick");
+		
+		System.out.println(st);
+
+	}
+
+}

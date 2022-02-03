@@ -1,0 +1,19 @@
+package com.ha.base;
+
+public class Person {
+	private String name;
+	private int phoneNumber;
+	private String mailId;
+	private String address;
+	private static String SchoolName;
+	private static String schoolAddress;
+	
+	
+	
+	
+
+	
+
+	}
+
+

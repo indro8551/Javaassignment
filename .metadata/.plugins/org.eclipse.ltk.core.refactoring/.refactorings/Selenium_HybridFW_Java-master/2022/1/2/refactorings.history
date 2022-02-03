@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Selenium_HybridFW_Java-master/Automation HAT Framework/QA 1.0/Untitled 1&apos; to &apos;Sign up form&apos;" description="Rename resource &apos;Untitled 1&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Automation HAT Framework/QA 1.0/Untitled 1" name="Sign up form" stamp="1641466495209" updateReferences="true"/>
+</session>
